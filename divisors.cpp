@@ -9,7 +9,7 @@ int main(){
     long long n=100005;
     
     vector<long long > v(n+1,0);
-    v[0]=1;                      //sieve of eratosthenes
+    v[0]=1;                      //sieve of eratosthenes for prime  numbers.
     v[1]=1;
     for(int i=2;i*i<=n;i++){
         if(v[i]==0){
