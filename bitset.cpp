@@ -3,7 +3,7 @@ using namespace std;
 
 #define ll long long int
 
-void subsets(string s,int i,int n,string osf){
+void subsets(string s,int i,int n,string osf){     //getting all substring of a string.
     if(i==n){
         cout<<osf<<endl;
         return;
@@ -11,7 +11,7 @@ void subsets(string s,int i,int n,string osf){
     subsets(s,i+1,n,osf+s[i]);
     subsets(s,i+1,n,osf);
 }
-bool palin(string s,int l,int r){
+bool palin(string s,int l,int r){  //to check if string is palindrome or not.
     if(l>=r) {return true;}
 
     if(s[l]!=s[r]){return false;}
@@ -19,7 +19,7 @@ bool palin(string s,int l,int r){
     palin(s,l+1,r-1);
 }
 
-int squareroot(int *a,int n){
+int squareroot(int *a,int n){ //square root of number via binary search.
     int s=0;
     int l=n-1;
     while(s<=l){
@@ -36,7 +36,7 @@ int squareroot(int *a,int n){
     }
 }
 int c=0;
-int staircase(int n,int i){
+int staircase(int n,int i){  //N-staircase problem i.e you are on 0 stair and want to reach nth stair and can take on 1 ,2 ,3 jump to reach destination .count possible number of ways to reach there.
     if(i==n){
         c++;
     }
