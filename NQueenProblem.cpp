@@ -68,4 +68,6 @@ int main(){
     
     return 0;
 }
+//Space Complexity O(n*n)
+//Time Complexity O(n!)
    
