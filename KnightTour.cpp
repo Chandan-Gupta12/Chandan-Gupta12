@@ -4,20 +4,6 @@ using namespace std;
 
 #define ll long long int 
 
-
-// bool isitsafe(vector<vector<bool>> grid,int row,int col,int n){
-//     for(int i=row-1;i>=0;i--){   //column check
-//         if(grid[i][col]) return false;
-//     }
-//     for(int i=row-1,j=col-1;i>=0 and j>=0;i--,j--){ //left upper diagonal
-//         if(grid[i][j]) return false;
-//     }
-//     for(int i=row-1,j=col+1;i>=0 and j<n;i--,j++){ //right upper diagonal
-//         if(grid[i][j]) return false;
-//     }
-//     return true;
-// }
-
 void display(vector<vector<int>> &grid,int n){
     for(int i=0;i<n;i++){
         for(int j=0;j<n;j++){
