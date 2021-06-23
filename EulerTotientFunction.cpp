@@ -40,8 +40,6 @@ int main() {
     int n;
     cin>>n;
     cout<<phi(n)<<endl;
-
-
- 
 return 0;
 }
+//Time complexity O(sqrt(n))
