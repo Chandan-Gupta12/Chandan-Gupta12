@@ -8,6 +8,21 @@ using namespace std;
 #define mod 1000000007
 #define all(v)  v.begin(),v.end()
 
+int ph[1000001];
+void init(int mxn,int n){  //Using Sieve More efficient.
+    loop(i,1,1000000)
+    ph[i]=i;
+
+    for(int i=2;i<=mxn;i++){
+        if(ph[i]==i){
+            for(int j=i;j<=mxn;j+=i){
+                ph[j]/=i;
+                ph[j]*=(i-1);
+            }
+        }
+    }
+    cout<<ph[n]<<endl;
+}
 
 int phi(int n){
     int res=n;
@@ -39,6 +54,7 @@ int main() {
 
     int n;
     cin>>n;
+    init(1000001,n);
     cout<<phi(n)<<endl;
 return 0;
 }
